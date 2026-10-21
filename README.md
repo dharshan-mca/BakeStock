@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BakeStock — Offline Bakery & Grocery Inventory & Production Management System
 
 **BakeStock** is a comprehensive, production-grade, offline-first Android application built with **Kotlin**, **Jetpack Compose**, **Material Design 3**, and **Room Database (SQLite)**. It is specifically designed for commercial bakeries, pastry kitchens, commissaries, and food manufacturing enterprises.
@@ -65,3 +66,6 @@ You can select any role directly from the **Role Selection** screen or sign in w
    * Let Gradle sync dependencies automatically.
    * Connect an Android device (Android 7.0 / API 24+) or launch an Android Virtual Device (AVD).
    * Click **Run (Shift + F10)**.
+=======
+# BakeStock
+>>>>>>> origin/main
