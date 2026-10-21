@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isEmployeeAdmin() {
+      return isAuthenticated() &&
+        (get(/databases/$(database)/documents/employees/$(request.auth.uid)).data.role == "ADMIN" ||
+         request.auth.token.email == "admin@bakestock.com" ||
+         request.auth.token.email == "admin");
+    }
+
+    // Employees Collection Rules
+    match /employees/{employeeId} {
+      // Admin can read and write all employee profiles
+      // Kitchen Masters and Delivery Men can read their own profile
+      allow read: if isAuthenticated();
+      allow write: if isEmployeeAdmin() || isOwner(employeeId);
+    }
+
+    // Inventory Collection Rules
+    match /inventory/{inventoryId} {
+      // All authenticated employees (Admin, Kitchen Master, Delivery Man) can read inventory
+      allow read: if isAuthenticated();
+      // Authenticated users can write/update inventory
+      allow write: if isAuthenticated();
+    }
+
+    // Stock History Collection Rules
+    match /stockHistory/{historyId} {
+      allow read: if isAuthenticated();
+      allow create, update: if isAuthenticated();
+    }
+
+    // Activity Logs Collection Rules
+    match /activityLogs/{logId} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

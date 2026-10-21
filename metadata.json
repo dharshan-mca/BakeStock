@@ -1,0 +1,6 @@
+{
+  "name": "BakeStock",
+  "description": "Bakery and Grocery Stock Maintenance System for managing raw materials, finished bakery products, production batches, purchases, and delivery requests.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:translateX="0"
+        android:translateY="0">
+        <!-- Outer Golden Circle -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#E6A13B"
+            android:strokeWidth="3.5"
+            android:pathData="M54,22 A32,32 0 1 1 22,54" />
+        <!-- Wheat Ears -->
+        <path
+            android:fillColor="#E6A13B"
+            android:pathData="M80,38 C83,32 86,28 84,24 C80,26 76,29 74,34 Z" />
+        <path
+            android:fillColor="#F5B842"
+            android:pathData="M84,48 C88,42 90,38 88,34 C84,36 80,40 78,45 Z" />
+        <path
+            android:fillColor="#E6A13B"
+            android:pathData="M83,60 C87,54 88,50 86,46 C82,48 78,52 77,57 Z" />
+        <!-- Stock Bars -->
+        <path
+            android:fillColor="#548C2F"
+            android:pathData="M38,68 L44,68 L44,56 L38,56 Z" />
+        <path
+            android:fillColor="#68A33A"
+            android:pathData="M48,68 L54,68 L54,48 L48,48 Z" />
+        <path
+            android:fillColor="#7CBC43"
+            android:pathData="M58,68 L64,68 L64,40 L58,40 Z" />
+        <!-- Upward Trend Arrow -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#FF8F00"
+            android:strokeWidth="3.5"
+            android:strokeLineCap="round"
+            android:pathData="M36,54 Q50,48 70,32" />
+        <path
+            android:fillColor="#FF8F00"
+            android:pathData="M64,30 L74,30 L72,40 Z" />
+    </group>
+</vector>
